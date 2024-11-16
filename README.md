@@ -18,7 +18,7 @@ Este projeto visa desenvolver um sistema de baixo custo para a detecção de gas
         </ul>
 </ol>
 
-![Funcionamento](imagens/funcionamento.png)
+![Funcionamento](images/funcionamento.png)
 
 
 ## Software Desenvolvido
