@@ -67,30 +67,50 @@ Vale ressaltar que o esquema abaixo é uma representação simplificada, pois so
 ![Modelo de Montagem](images/modelo_montagem.PNG)
 
 ### Passo 2: Configuração do Projeto no Arduino IoT Cloud
-
-1. Acesse o Arduino IoT Cloud:
-   - Vá para [Arduino IoT Cloud](https://app.arduino.cc/) e faça login com sua conta Arduino. Caso ainda não tenha uma conta, crie uma.
-
-2. Crie um Novo "Thing":
-   - Na tela principal do Arduino IoT Cloud, clique em **Create New Thing**.
-   - Dê um nome ao seu "Thing" (ex: "Monitoramento de Gás").
-   - Selecione a placa do projeto **Arduino Uno R4**.
-
-3. Adicione as Variáveis de Nuvem:
-   - Clique em **Add Variable**.
-   - Crie as variáveis `gasConcentrationMQ2` e `gasConcentrationMQ135`, ambas do tipo `int`. Marque essas variáveis como **READWRITE** (Ler e Escrever).
-
-4. Configure a Network:
-   - Adicione o nome e senha de sua rede.
-   - Clique em salvar.
-
-5. Abra o menu Sketch:
-   - Adicione dois arquivos e copie os códigos que estão na pasta src.
-
-6.  Instale as Bibliotecas Necessárias:
-   - Ainda na aba de Sketch vá para o menu lateral esquerdo na opção de **Libraries**
-   - Instale seguintes bibliotecas: `Arduino IoT Cloud` e `Arduino_LED_Matrix`.
-
-7.  Compile e carregue o código
-   - No Arduino IDE, clique em Verificar (ícone de check) para compilar o código.
-   - Se a compilação for bem-sucedida, clique em Carregar (ícone de seta para a direita) para carregar o código na sua placa Arduino.
+<ol>
+    <li>Acesse o Arduino IoT Cloud:
+        <ul>
+            <li>Vá para <a href="https://app.arduino.cc/">Arduino IoT Cloud</a> e faça login com sua conta Arduino. Caso ainda não tenha uma conta, crie uma.
+            </li>
+        </ul>
+    </li>
+    <li>Crie um Novo "Thing":
+        <ul>
+            <li>Na tela principal do Arduino IoT Cloud, clique em <strong>Create New Thing</strong>.
+            </li>
+            <li>Dê um nome ao seu "Thing" (ex: "Monitoramento de Gás").
+            </li>
+            <li>Selecione a placa do projeto <strong>Arduino Uno R4</strong>.
+            </li>
+        </ul>
+    </li>
+    <li>Adicione as Variáveis de Nuvem:
+        <ul>
+            <li>Clique em <strong>Add Variable</strong>.</li>
+            <li>Crie as variáveis <code>gasConcentrationMQ2</code> e <code>gasConcentrationMQ135</code>, ambas do tipo <code>int</code>. Marque essas variáveis como <strong>READWRITE</strong> (Ler e Escrever).</li>
+        </ul>
+    </li>
+    <li>Configure a Network:
+        <ul>
+            <li>Adicione o nome e senha de sua rede.</li>
+            <li>Clique em salvar.</li>
+        </ul>
+    </li>
+    <li>Abra o menu Sketch:
+        <ul>
+            <li>Adicione dois arquivos e copie os códigos que estão na pasta src.</li>
+        </ul>
+    </li>
+    <li>Instale as Bibliotecas Necessárias:
+        <ul>
+            <li>Ainda na aba de Sketch vá para o menu lateral esquerdo na opção de <strong>Libraries</strong></li>
+            <li>Instale seguintes bibliotecas: <code>Arduino IoT Cloud</code> e <code>Arduino_LED_Matrix</code>.</li>
+        </ul>
+    </li>
+    <li>Compile e carregue o código
+        <ul>
+            <li>No Arduino IDE, clique em Verificar (ícone de check) para compilar o código.</li>
+            <li>Se a compilação for bem-sucedida, clique em Carregar (ícone de seta para a direita) para carregar o código na sua placa Arduino.</li>
+        </ul>
+    </li>
+</ol>
