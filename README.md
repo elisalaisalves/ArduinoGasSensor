@@ -3,7 +3,7 @@
 ## Descrição
 Este projeto visa desenvolver um sistema de baixo custo para a detecção de gases tóxicos e inflamáveis em ambientes industriais, utilizando a plataforma Arduino e sensores como o MQ-2 e MQ-135. O sistema transmite dados via internet utilizando o protocolo MQTT, permitindo o monitoramento remoto das condições ambientais em tempo real.
 
-## Funcionamento e Uso
+## Configurações e Funcionamento
 <ol>
     <li>Configuração do Sistema:</li>
         <ul>
@@ -11,15 +11,17 @@ Este projeto visa desenvolver um sistema de baixo custo para a detecção de gas
             <li>O Arduino será programado para ler as variações de tensão dos sensores, convertendo esses valores em concentrações de gases.</li>
             <li>O sistema utiliza o protocolo MQTT para enviar os dados para a nuvem, possibilitando o monitoramento remoto via internet.</li>
         </ul>
-    <li>Uso:</li>
-        <ul>
-            <li>Ao detectar uma alta concentração de gases tóxicos ou inflamáveis, o sistema acende uma matriz de LEDs para alertar visualmente sobre o risco.</li>
-            <li>O status do sistema pode ser acessado via dashboard disponível na plataforma Arduino Cloud.</li>
-        </ul>
+    <li>Funcionamento:</li>
+        <ol>
+            <li>Sensores de gás captam as concentrações de gases no ambiente. </li>
+            <li>O Arduino UNO R4 Wi-Fi realiza a leitura dos sensores através das portas analógicas A0 e A1.</li>
+            <li>As leituras de concentração de gás são enviadas para a plataforma Arduino Cloud através do protocolo MQTT, usando a classe ArduinoCloud. </li>
+            <li>O valor da concentração de gás é automaticamente transmitido e armazenado no Arduino Cloud, podendo ser acessado remotamente. </li>
+            <li>O Arduino utiliza esses dados para atualizar a matriz de LEDs, convertendo as leituras em uma representação visual. </li>
+        </ol>
 </ol>
 
 ![Funcionamento](images/funcionamento.png)
-
 
 ## Software Desenvolvido
 O código do sistema foi desenvolvido em C/C++ utilizando a plataforma Arduino Cloud. A principal funcionalidade é a leitura dos sensores MQ-2 e MQ-135 e o envio dos dados via protocolo MQTT para uma plataforma de monitoramento em nuvem.
@@ -52,12 +54,19 @@ A integração entre o Arduino e o broker MQTT é realizada automaticamente atra
 
 ## Requisitos para a execução
 <ul>
-    <li>Hardware: Arduino UNO R4 WiFi, sensores MQ-2, MQ-135, protoboard.</li>
+    <li>Hardware: Arduino UNO R4 WiFi, sensores MQ-2, MQ-135, mini protoboard.</li>
     <li>Software: Arduino Cloud.</li>
 </ul>
 
 ## Como Reproduzir
-### Passo 1: Configuração do Projeto no Arduino IoT Cloud
+### Passo 1: Modelo de montagem
+Monte seu protótipo conforme o modelo de montagem a seguir. 
+
+Vale ressaltar que o esquema abaixo é uma representação simplificada, pois softwares gratuitos não oferecem suporte ao modelo Arduino R4 Wi-Fi para a criação de circuitos online. 
+
+![Modelo de Montagem](images/modelo_montagem.png)
+
+### Passo 2: Configuração do Projeto no Arduino IoT Cloud
 
 1. Acesse o Arduino IoT Cloud:
    - Vá para [Arduino IoT Cloud](https://app.arduino.cc/) e faça login com sua conta Arduino. Caso ainda não tenha uma conta, crie uma.
@@ -85,7 +94,3 @@ A integração entre o Arduino e o broker MQTT é realizada automaticamente atra
 7.  Compile e carregue o código
    - No Arduino IDE, clique em Verificar (ícone de check) para compilar o código.
    - Se a compilação for bem-sucedida, clique em Carregar (ícone de seta para a direita) para carregar o código na sua placa Arduino.
-
-## Conclusão
-
-
