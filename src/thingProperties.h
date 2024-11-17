@@ -6,16 +6,25 @@
 const char SSID[]     = SECRET_SSID;    // Network SSID (name)
 const char PASS[]     = SECRET_OPTIONAL_PASS;    // Network password (use for WPA, or use as key for WEP)
 
+void onCloudTimeMQ135Change();
+void onCloudTimeMQ2Change();
 void onGasConcentrationMQ135Change();
 void onGasConcentrationMQ2Change();
+void onLatenciaAtuadorChange();
 
+int cloudTimeMQ135;
+int cloudTimeMQ2;
 int gasConcentrationMQ135;
 int gasConcentrationMQ2;
+int latenciaAtuador;
 
 void initProperties(){
 
-  ArduinoCloud.addProperty(gasConcentrationMQ135, READWRITE, ON_CHANGE, onGasConcentrationMQ135Change);
-  ArduinoCloud.addProperty(gasConcentrationMQ2, READWRITE, 2 * SECONDS, onGasConcentrationMQ2Change);
+  ArduinoCloud.addProperty(cloudTimeMQ135, READWRITE, 5 * SECONDS, onCloudTimeMQ135Change);
+  ArduinoCloud.addProperty(cloudTimeMQ2, READWRITE, 5 * SECONDS, onCloudTimeMQ2Change);
+  ArduinoCloud.addProperty(gasConcentrationMQ135, READWRITE, ON_CHANGE, onGasConcentrationMQ135Change, 1);
+  ArduinoCloud.addProperty(gasConcentrationMQ2, READWRITE, ON_CHANGE, onGasConcentrationMQ2Change, 1);
+  ArduinoCloud.addProperty(latenciaAtuador, READWRITE, ON_CHANGE, onLatenciaAtuadorChange, 1);
 
 }
 
