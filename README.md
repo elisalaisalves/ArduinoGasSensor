@@ -64,6 +64,8 @@ Monte seu protótipo conforme o modelo de montagem a seguir.
 
 Vale ressaltar que o esquema abaixo é uma representação simplificada, pois softwares gratuitos não oferecem suporte ao modelo Arduino R4 Wi-Fi para a criação de circuitos online. 
 
+![Modelo de Montagem](images/modelo_montagem.png)
+
 ### Passo 2: Configuração do Projeto no Arduino IoT Cloud
 
 1. Acesse o Arduino IoT Cloud:
