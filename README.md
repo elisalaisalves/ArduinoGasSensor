@@ -50,7 +50,7 @@ O código e a documentação estão disponíveis no repositório deste projeto.
 ## Comunicação, Protocolos e Módulos
 
 ## Protocolo MQTT
-A integração entre o Arduino e o broker MQTT é realizada automaticamente através da plataforma Arduino Cloud, sem necessidade de configuração manual do broker. A comunicação é feita de maneira simplificada, usando a classe ArduinoCloud que gerencia a conexão com a nuvem e o envio de dados. No código, a inicialização do Arduino Cloud ocorre dentro da função setup(), por meio da chamada ArduinoCloud.begi(ArduinoIoTPreferredConnection), que configura a conexão com o broker MQTT da plataforma Arduino Cloud.
+A integração entre o Arduino e o broker MQTT é realizada automaticamente através da plataforma Arduino Cloud, sem necessidade de configuração manual do broker. A comunicação é feita de maneira simplificada, usando a classe ArduinoCloud que gerencia a conexão com a nuvem e o envio de dados. No código, a inicialização do Arduino Cloud ocorre dentro da função setup(), por meio da chamada ArduinoCloud.begin(ArduinoIoTPreferredConnection), que configura a conexão com o broker MQTT da plataforma Arduino Cloud.
 Para mais informações sobre a operacionalização com o protocolo MQTT acessar a documentação presente no link [GitHub - ArduinoIoTCloud](https://github.com/arduino-libraries/ArduinoIoTCloud/tree/master).
 
 ## Requisitos para a execução
