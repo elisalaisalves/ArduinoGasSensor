@@ -1,4 +1,4 @@
-# Sistema de Detecção de Gases Industriais com Arduino e IoT :factory::dash:
+# Sistema de Detecção de gases tóxicos e inflamáveis no meio industrial por meio de Arduino e IoT :factory::dash:
 
 ## Descrição
 Este projeto visa desenvolver um sistema de baixo custo para a detecção de gases tóxicos e inflamáveis em ambientes industriais, utilizando a plataforma Arduino e sensores como o MQ-2 e MQ-135. O sistema transmite dados via internet utilizando o protocolo MQTT, permitindo o monitoramento remoto das condições ambientais em tempo real.
@@ -51,7 +51,7 @@ O código e a documentação estão disponíveis no repositório deste projeto.
 
 ## Protocolo MQTT
 A integração entre o Arduino e o broker MQTT é realizada automaticamente através da plataforma Arduino Cloud, sem necessidade de configuração manual do broker. A comunicação é feita de maneira simplificada, usando a classe ArduinoCloud que gerencia a conexão com a nuvem e o envio de dados. No código, a inicialização do Arduino Cloud ocorre dentro da função setup(), por meio da chamada ArduinoCloud.begi(ArduinoIoTPreferredConnection), que configura a conexão com o broker MQTT da plataforma Arduino Cloud.
-Para mais informações sobre a operacionalização com o protocolo MQTT acessar [[GitHub - ArduinoIoTCloud]([ArduinoIoTCloud](https://github.com/arduino-libraries/ArduinoIoTCloud/tree/master))](https://github.com/arduino-libraries/ArduinoIoTCloud/tree/master)
+Para mais informações sobre a operacionalização com o protocolo MQTT acessar a documentação presente no link [GitHub - ArduinoIoTCloud](https://github.com/arduino-libraries/ArduinoIoTCloud/tree/master).
 
 ## Requisitos para a execução
 <ul>
